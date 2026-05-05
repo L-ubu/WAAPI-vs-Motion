@@ -1,0 +1,283 @@
+/* fonts */
+@import '@fontsource-variable/inter';
+@import '@fontsource/monaspace-neon';
+
+/* presentation */
+@import '$lib/styles/theme.css';
+
+/* tailwind */
+@import 'tailwindcss/theme';
+@import 'tailwindcss/utilities';
+
+/* reset */
+*,
+*::before,
+*::after {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+/* ── palette (dark – default) ── */
+:root {
+	--bg: #0a0a0a;
+	--surface: #1e1e2e;
+	--border: #2a2a3c;
+	--text: #e4e4e7;
+	--text-muted: #a1a1aa;
+	--purple: #a78bfa;
+	--blue: #60a5fa;
+	--emerald: #34d399;
+	--pink: #f9a8d4;
+	--cyan: #22d3ee;
+	--amber: #fbbf24;
+
+	--r-background-color: var(--bg);
+	--r-main-font: 'Inter Variable', 'Inter', -apple-system, sans-serif;
+	--r-main-font-size: 42px;
+	--r-main-color: var(--text);
+	--r-heading-font: 'Inter Variable', 'Inter', -apple-system, sans-serif;
+	--r-code-font: 'Monaspace Neon';
+	--r-link-color: var(--blue);
+	--ease: linear(
+		0 0%,
+		0.0036 9.62%,
+		0.0185 16.66%,
+		0.0489 23.03%,
+		0.0962 28.86%,
+		0.1705 34.93%,
+		0.269 40.66%,
+		0.3867 45.89%,
+		0.5833 52.95%,
+		0.683 57.05%,
+		0.7829 62.14%,
+		0.8621 67.46%,
+		0.8991 70.68%,
+		0.9299 74.03%,
+		0.9545 77.52%,
+		0.9735 81.21%,
+		0.9865 85%,
+		0.9949 89.15%,
+		1 100%
+	);
+	--view-transition-duration: 0.4s;
+}
+
+/* ── palette (light – toggled via M key) ── */
+:root[data-theme="light"] {
+	--bg: #f8f8fa;
+	--surface: #1e1e2e;
+	--border: #2a2a3c;
+	--text: #1a1a2e;
+	--text-muted: #5a5a72;
+	--purple: #7c3aed;
+	--blue: #2563eb;
+	--emerald: #059669;
+	--pink: #db2777;
+	--cyan: #0891b2;
+	--amber: #d97706;
+}
+
+/* code block background */
+div:has(> pre) {
+	padding: 1rem 2rem;
+	background-color: var(--surface);
+	border-top: 1px solid var(--border);
+	border-radius: 12px;
+}
+
+.hidden {
+	display: none;
+}
+
+/* ── gradient text utility ── */
+.gradient-text {
+	background: linear-gradient(135deg, var(--purple), var(--blue));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.gradient-text-emerald {
+	background: linear-gradient(135deg, var(--emerald), var(--cyan));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.gradient-text-amber {
+	background: linear-gradient(135deg, var(--amber), #f59e0b);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+/* ── slide divider styling ── */
+.divider-slide {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	position: relative;
+	overflow: visible;
+}
+
+.divider-slide::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background:
+		radial-gradient(1.5px 1.5px at 10% 20%, rgba(167, 139, 250, 0.25) 50%, transparent 50%),
+		radial-gradient(1px 1px at 30% 70%, rgba(96, 165, 250, 0.2) 50%, transparent 50%),
+		radial-gradient(1.5px 1.5px at 60% 15%, rgba(52, 211, 153, 0.2) 50%, transparent 50%),
+		radial-gradient(1px 1px at 80% 60%, rgba(249, 168, 212, 0.15) 50%, transparent 50%),
+		radial-gradient(1.5px 1.5px at 45% 85%, rgba(34, 211, 238, 0.2) 50%, transparent 50%),
+		radial-gradient(1px 1px at 90% 30%, rgba(167, 139, 250, 0.15) 50%, transparent 50%),
+		radial-gradient(1px 1px at 15% 50%, rgba(96, 165, 250, 0.15) 50%, transparent 50%),
+		radial-gradient(1.5px 1.5px at 70% 40%, rgba(52, 211, 153, 0.15) 50%, transparent 50%);
+	animation: drift 20s linear infinite;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.divider-slide > * {
+	position: relative;
+	z-index: 1;
+}
+
+@keyframes drift {
+	0% { translate: 0 0; }
+	50% { translate: -15px 10px; }
+	100% { translate: 0 0; }
+}
+
+/* ── demo area ── */
+.demo-area {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 16px;
+	padding: 2rem;
+	min-height: 200px;
+	position: relative;
+	overflow: hidden;
+}
+
+.demo-box {
+	width: 60px;
+	height: 60px;
+	border-radius: 12px;
+	background: linear-gradient(135deg, var(--purple), var(--blue));
+}
+
+.demo-ball {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, var(--cyan), var(--emerald));
+	box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+}
+
+.demo-btn {
+	padding: 6px 16px;
+	font-family: var(--r-code-font);
+	font-size: 0.7rem;
+	font-weight: 600;
+	color: var(--text);
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	cursor: pointer;
+	transition: border-color 0.2s;
+}
+
+.demo-btn:hover {
+	border-color: var(--purple);
+}
+
+/* ── side-by-side panels ── */
+.panel {
+	flex: 1;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+.panel-header {
+	padding: 0.6rem 1rem;
+	border-bottom: 1px solid var(--border);
+	font-family: var(--r-code-font);
+	font-size: 0.6rem;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.panel-body {
+	padding: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 180px;
+}
+
+/* ── view transitions ── */
+html {
+	view-transition-name: none;
+}
+
+::view-transition-group(*) {
+	animation-duration: var(--view-transition-duration);
+	animation-timing-function: var(--ease);
+}
+
+::view-transition-new(*):only-child {
+	animation: fade-slide-in var(--view-transition-duration) var(--ease);
+}
+
+::view-transition-old(*):only-child {
+	animation: fade-slide-out var(--view-transition-duration) var(--ease);
+}
+
+@keyframes fade-slide-in {
+	from { opacity: 0; }
+}
+
+@keyframes fade-slide-out {
+	to { opacity: 0; }
+}
+
+@keyframes scale-in {
+	from { scale: 0.9; opacity: 0; }
+}
+
+@keyframes float {
+	0%, 100% { translate: 0 0; }
+	50% { translate: 0 -8px; }
+}
+
+@keyframes pulse-glow {
+	0%, 100% { opacity: 0.4; }
+	50% { opacity: 1; }
+}
+
+/* ── stagger utility ── */
+.stagger-children > * {
+	opacity: 0;
+	animation: stagger-in 0.4s var(--ease) forwards;
+}
+.stagger-children > *:nth-child(1) { animation-delay: 0s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.08s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.16s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.24s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.32s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.40s; }
+
+@keyframes stagger-in {
+	from { opacity: 0; translate: 0 8px; }
+	to { opacity: 1; translate: 0 0; }
+}
