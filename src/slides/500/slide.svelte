@@ -95,3 +95,9 @@ box.animate(
 		}}
 	/>
 </div>
+
+<aside class="notes">
+This is the core API - element.animate().
+Takes keyframes array and options object. Returns an Animation object you can control.
+Demo: click to see the box animate.
+</aside>

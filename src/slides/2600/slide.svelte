@@ -61,3 +61,9 @@
 		</div>
 	</Transition>
 </div>
+
+<aside class="notes">
+Both use the same WAAPI engine for transforms/opacity.
+Motion adds JS overhead for spring calc and gesture handling.
+For simple animations performance is identical. Complex ones - Motion does more work but stays smooth.
+</aside>

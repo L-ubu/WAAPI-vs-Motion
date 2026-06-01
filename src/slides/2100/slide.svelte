@@ -40,7 +40,7 @@
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: 1.5rem;">
 	<Transition visible>
 		<p style="font-size: 1.8rem; font-weight: 700; color: var(--text); letter-spacing: -0.02em;">
-			Spring — what <span style="color: var(--amber);">WAAPI</span> can't do
+			Spring - what <span style="color: var(--amber);">WAAPI</span> can't do
 		</p>
 	</Transition>
 
@@ -84,7 +84,13 @@
 
 	<Transition>
 		<p style="font-size: 1rem; color: var(--text-muted); margin-top: 0.5rem;">
-			CSS easing can approximate — but a real spring <span style="color: var(--purple); font-weight: 600;">feels</span> different
+			CSS easing can approximate - but a real spring <span style="color: var(--purple); font-weight: 600;">feels</span> different
 		</p>
 	</Transition>
 </div>
+
+<aside class="notes">
+WAAPI only has cubic-bezier or steps - no real spring.
+You can approximate with JS-computed keyframes but it is hacky.
+Motion has a real spring physics solver built in.
+</aside>

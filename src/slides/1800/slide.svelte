@@ -107,3 +107,8 @@ const child = {
 		</p>
 	</Transition>
 </div>
+
+<aside class="notes">
+Remember the forEach stagger from WAAPI? One line here: staggerChildren.
+Variants propagate through the component tree. Parent coordinates children automatically.
+</aside>

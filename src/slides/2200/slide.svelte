@@ -47,7 +47,7 @@
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: 1.5rem;">
 	<Transition visible>
 		<p style="font-size: 1.8rem; font-weight: 700; color: var(--text); letter-spacing: -0.02em;">
-			Stagger — verbose vs declarative
+			Stagger - verbose vs declarative
 		</p>
 	</Transition>
 
@@ -97,7 +97,13 @@
 
 	<Transition>
 		<p style="font-size: 1rem; color: var(--text-muted); margin-top: 0.5rem;">
-			Same output — dramatically different <span style="color: var(--purple); font-weight: 600;">developer experience</span>
+			Same output - dramatically different <span style="color: var(--purple); font-weight: 600;">developer experience</span>
 		</p>
 	</Transition>
 </div>
+
+<aside class="notes">
+WAAPI: forEach loop, manual delay math.
+Motion: staggerChildren in parent variant, done.
+Same visual result but much less code and mental overhead.
+</aside>

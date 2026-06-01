@@ -178,7 +178,13 @@
 
 	<Transition>
 		<p style="font-size: 1rem; color: var(--text-muted); margin-top: 0.5rem;">
-			Hover, tap, drag — <span style="color: var(--purple); font-weight: 600;">declarative</span>, not imperative
+			Hover, tap, drag - <span style="color: var(--purple); font-weight: 600;">declarative</span>, not imperative
 		</p>
 	</Transition>
 </div>
+
+<aside class="notes">
+Declarative gesture handling. One prop each.
+No addEventListener, no cleanup, no pointer capture math.
+Drag has constraints built in. Demo: try hovering, clicking, dragging.
+</aside>

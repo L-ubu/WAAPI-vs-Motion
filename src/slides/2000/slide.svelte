@@ -44,7 +44,7 @@
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: 1.5rem;">
 	<Transition visible>
 		<p style="font-size: 1.8rem; font-weight: 700; color: var(--text); letter-spacing: -0.02em;">
-			Hover — <span style="color: var(--amber);">WAAPI</span> vs <span style="color: var(--purple);">Motion</span>
+			Hover - <span style="color: var(--amber);">WAAPI</span> vs <span style="color: var(--purple);">Motion</span>
 		</p>
 	</Transition>
 
@@ -89,3 +89,8 @@
 		</p>
 	</Transition>
 </div>
+
+<aside class="notes">
+Same result, different DX. WAAPI needs event listeners, cleanup, imperative code.
+Motion: one prop. For simple hover both are fine. But Motion scales better for complex interactions.
+</aside>

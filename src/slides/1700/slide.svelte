@@ -14,16 +14,7 @@
 		{ id: 3, label: 'Item C', color: 'var(--emerald)' },
 	])
 	let nextId = 4
-	let itemEls: Record<number, HTMLDivElement> = {}
-
-	function trackEl(node: HTMLDivElement, id: number) {
-		itemEls[id] = node
-		return {
-			destroy() {
-				delete itemEls[id]
-			}
-		}
-	}
+	let listContainer: HTMLDivElement
 
 	function addItem() {
 		const colors = ['var(--amber)', 'var(--pink)', 'var(--purple)', 'var(--cyan)', 'var(--emerald)']
@@ -34,20 +25,19 @@
 		}
 		listItems = [...listItems, newItem]
 		requestAnimationFrame(() => {
-			const el = itemEls[newItem.id]
+			const el = listContainer?.lastElementChild as HTMLElement
 			if (el) {
-				animate(el, { opacity: [0, 1], y: [20, 0], scale: [0.8, 1] }, { duration: 0.4, easing: 'ease-out' })
+				animate(el, { opacity: [0, 1], transform: ['translateY(20px) scale(0.8)', 'translateY(0px) scale(1)'] }, { duration: 0.4, easing: 'ease-out' })
 			}
 		})
 	}
 
 	function removeItem() {
 		if (listItems.length === 0) return
-		const lastItem = listItems[listItems.length - 1]
-		const el = itemEls[lastItem.id]
+		const el = listContainer?.lastElementChild as HTMLElement
 		if (el) {
-			animate(el, { opacity: [1, 0], x: [0, 60], scale: [1, 0.8] }, { duration: 0.3, easing: 'ease-in' }).then(() => {
-				listItems = listItems.filter((i) => i.id !== lastItem.id)
+			animate(el, { opacity: [1, 0], transform: ['translateX(0px) scale(1)', 'translateX(60px) scale(0.8)'] }, { duration: 0.3, easing: 'ease-in' }).then(() => {
+				listItems = listItems.slice(0, -1)
 			})
 		} else {
 			listItems = listItems.slice(0, -1)
@@ -87,10 +77,9 @@
 
 			<div style="flex: 0.5;">
 				<div class="demo-area" style="flex-direction: column; gap: 0.8rem; min-height: 260px; padding: 1.5rem;">
-					<div style="display: flex; flex-direction: column; gap: 0.4rem; width: 100%; min-height: 120px;">
+					<div bind:this={listContainer} style="display: flex; flex-direction: column; gap: 0.4rem; width: 100%; min-height: 120px;">
 						{#each listItems as item (item.id)}
 							<div
-								use:trackEl={item.id}
 								style="padding: 0.6rem 0.8rem; background: rgba(255,255,255,0.05); border: 1.5px solid {item.color}; border-radius: 10px; font-size: 0.8rem; color: {item.color}; font-family: var(--r-code-font); text-align: center; font-weight: 600;"
 							>
 								{item.label}
@@ -118,7 +107,13 @@
 
 	<Transition>
 		<p style="font-size: 1rem; color: var(--text-muted); margin-top: 0.5rem;">
-			The <code style="color: var(--purple); background: var(--surface); padding: 2px 8px; border-radius: 6px;">exit</code> prop — impossible with WAAPI alone
+			The <code style="color: var(--purple); background: var(--surface); padding: 2px 8px; border-radius: 6px;">exit</code> prop - impossible with WAAPI alone
 		</p>
 	</Transition>
 </div>
+
+<aside class="notes">
+The React problem - when you unmount, the DOM element is gone.
+AnimatePresence keeps it alive during exit animation.
+Click Add/Remove to demo. Impossible with WAAPI alone in React.
+</aside>

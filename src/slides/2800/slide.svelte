@@ -31,6 +31,12 @@
 	</p>
 
 	<p style="font-size: 1.2rem; color: var(--text-muted); opacity: {subOpacity.current}; text-align: center; max-width: 550px;">
-		They're complementary — not competing.<br>Motion is built on top of WAAPI.
+		They're complementary - not competing.<br>Motion is built on top of WAAPI.
 	</p>
 </div>
+
+<aside class="notes">
+Not a competition - they are complementary.
+Use WAAPI when you can, reach for Motion when you need its features.
+In our codebase most animations can be WAAPI. Reach for Motion for gesture-heavy or layout-animated components.
+</aside>

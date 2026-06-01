@@ -22,7 +22,7 @@
 
 	<Transition>
 		<p style="font-size: 1.15rem; color: var(--text-muted); max-width: 650px; text-align: center;">
-			A native browser API to create and control animations from JavaScript — no libraries needed.
+			A native browser API to create and control animations from JavaScript - no libraries needed.
 		</p>
 	</Transition>
 
@@ -44,3 +44,8 @@
 		</div>
 	</Transition>
 </div>
+
+<aside class="notes">
+Built into every modern browser. No install, no bundle cost.
+Landed in all evergreen browsers around 2020. Full spec support now.
+</aside>

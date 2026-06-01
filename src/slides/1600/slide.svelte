@@ -115,7 +115,12 @@
 
 	<Transition>
 		<p style="font-size: 1rem; color: var(--text-muted); margin-top: 0.5rem;">
-			One prop — <code style="color: var(--purple); background: var(--surface); padding: 2px 8px; border-radius: 6px;">layout</code> — handles all the FLIP math
+			One prop - <code style="color: var(--purple); background: var(--surface); padding: 2px 8px; border-radius: 6px;">layout</code> - handles all the FLIP math
 		</p>
 	</Transition>
 </div>
+
+<aside class="notes">
+Motion killer feature. Add layout prop and it auto-animates any layout change using FLIP.
+Position, size, even between different parents. No manual FLIP math needed.
+</aside>

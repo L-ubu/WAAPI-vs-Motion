@@ -68,3 +68,9 @@
 		</p>
 	</Transition>
 </div>
+
+<aside class="notes">
+Key takeaway slide. WAAPI for simple, light, framework-agnostic work.
+Motion for complex interactions, springs, layout, exits.
+They are complementary - Motion literally uses WAAPI under the hood.
+</aside>

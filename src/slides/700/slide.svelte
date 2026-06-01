@@ -103,3 +103,8 @@ bars.forEach((bar, i) => {
 		undo={() => code.selectLines`9`}
 	/>
 </div>
+
+<aside class="notes">
+No built-in stagger in WAAPI - you loop elements and add incremental delay.
+Simple but verbose. Highlight the delay line - that is the stagger trick.
+</aside>

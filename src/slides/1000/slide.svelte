@@ -43,3 +43,9 @@
 		</p>
 	</Transition>
 </div>
+
+<aside class="notes">
+Key limitations: no spring physics, no gesture system, no layout animations, no exit animations.
+These gaps are exactly what Motion fills.
+This is why Motion exists.
+</aside>

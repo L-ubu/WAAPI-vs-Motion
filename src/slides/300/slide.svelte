@@ -83,3 +83,9 @@
 		The native animation primitive
 	</p>
 </div>
+
+<aside class="notes">
+Quick landscape overview.
+CSS transitions are great but limited in JS control.
+WAAPI gives native control. Motion adds higher-level abstractions on top.
+</aside>

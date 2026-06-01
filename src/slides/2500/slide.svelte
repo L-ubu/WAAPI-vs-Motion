@@ -96,3 +96,9 @@
 		Complementary, not competing
 	</p>
 </div>
+
+<aside class="notes">
+WAAPI: 0kb - it is in the browser already.
+Motion: around 16kb gzipped. For micro-frontends or perf-critical apps this matters.
+For most apps 16kb is negligible.
+</aside>

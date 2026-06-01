@@ -98,3 +98,9 @@
 		</p>
 	</Transition>
 </div>
+
+<aside class="notes">
+Works in any framework - just need a ref to the DOM element.
+No special bindings needed.
+But notice - it is imperative code inside declarative components. Feels awkward.
+</aside>

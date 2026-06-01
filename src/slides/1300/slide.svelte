@@ -37,7 +37,7 @@
 	<Transition visible>
 		<p style="font-size: 1.8rem; font-weight: 700; color: var(--text); letter-spacing: -0.02em;">
 			<code style="color: var(--purple); background: var(--surface); padding: 4px 14px; border-radius: 8px; font-size: 1.6rem;">motion.div</code>
-			<span style="font-size: 1.2rem; color: var(--text-muted);"> — one prop</span>
+			<span style="font-size: 1.2rem; color: var(--text-muted);"> - one prop</span>
 		</p>
 	</Transition>
 
@@ -101,3 +101,8 @@
 		</p>
 	</Transition>
 </div>
+
+<aside class="notes">
+Similar to WAAPI but more ergonomic. One function, auto-infers from/to values.
+Supports springs natively. Less code for the same result.
+</aside>

@@ -53,3 +53,8 @@
 		Batteries included
 	</p>
 </div>
+
+<aside class="notes">
+Transition to Part 2. Now let us see what Motion adds on top of WAAPI.
+Fun fact: Motion actually uses WAAPI under the hood for transforms and opacity.
+</aside>

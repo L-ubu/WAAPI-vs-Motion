@@ -92,3 +92,9 @@
 		Same animation, different approaches
 	</p>
 </div>
+
+<aside class="notes">
+Motion is not free - adds bundle size (around 16kb).
+Requires React or specific framework binding.
+Can be overkill for simple fades. WAAPI is lighter when you do not need Motion features.
+</aside>

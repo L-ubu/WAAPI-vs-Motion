@@ -48,3 +48,8 @@
 		</Transition>
 	</div>
 </div>
+
+<aside class="notes">
+Animations are not decoration - they guide attention, provide feedback, reduce cognitive load.
+Studies show perceived performance improves with smooth transitions.
+</aside>

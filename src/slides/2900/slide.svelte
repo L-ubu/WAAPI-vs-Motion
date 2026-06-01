@@ -62,3 +62,7 @@
 		</p>
 	</Transition>
 </div>
+
+<aside class="notes">
+Open for questions. QR code links to the repo with all code and slides.
+</aside>

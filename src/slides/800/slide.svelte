@@ -74,7 +74,7 @@
 					<p style="margin-top: 0.5rem;">The progress bar above tracks scroll position using pure WAAPI.</p>
 					<p style="margin-top: 0.5rem;">No JavaScript scroll listeners needed.</p>
 					<p style="margin-top: 0.5rem;">No requestAnimationFrame loops.</p>
-					<p style="margin-top: 0.5rem;">Runs on the compositor thread — buttery smooth 60fps.</p>
+					<p style="margin-top: 0.5rem;">Runs on the compositor thread - buttery smooth 60fps.</p>
 					<p style="margin-top: 0.5rem;">This is the future of scroll animations.</p>
 					<p style="margin-top: 0.5rem;">All native. All performant.</p>
 					<p style="margin-top: 1rem; color: var(--amber);">You've reached the end!</p>
@@ -97,3 +97,9 @@
 		</p>
 	</Transition>
 </div>
+
+<aside class="notes">
+Scroll-driven animations run entirely on compositor thread - 60fps guaranteed, no JS on scroll.
+Chrome 115+, Firefox 110+. Safari working on it.
+This is a game-changer for scroll effects.
+</aside>

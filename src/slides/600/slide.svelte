@@ -144,3 +144,9 @@ anim.playbackRate = 3`}
 		}}
 	/>
 </div>
+
+<aside class="notes">
+Unlike CSS animations, WAAPI gives you an Animation object back.
+You can pause, play, reverse, change playbackRate.
+Great for interactive UIs where user controls playback.
+</aside>

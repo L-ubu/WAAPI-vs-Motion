@@ -58,7 +58,7 @@
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: 1.5rem;">
 	<Transition visible>
 		<p style="font-size: 1.8rem; font-weight: 700; color: var(--text); letter-spacing: -0.02em;">
-			Layout — Motion's <span style="color: var(--purple);">killer feature</span>
+			Layout - Motion's <span style="color: var(--purple);">killer feature</span>
 		</p>
 	</Transition>
 
@@ -107,7 +107,13 @@
 
 	<Transition>
 		<p style="font-size: 1rem; color: var(--text-muted); margin-top: 0.3rem;">
-			WAAPI has no concept of layout animation — <code style="color: var(--purple); background: var(--surface); padding: 2px 8px; border-radius: 6px;">layout</code> is Motion-only
+			WAAPI has no concept of layout animation - <code style="color: var(--purple); background: var(--surface); padding: 2px 8px; border-radius: 6px;">layout</code> is Motion-only
 		</p>
 	</Transition>
 </div>
+
+<aside class="notes">
+WAAPI has no layout animation concept at all.
+You would need to manually measure positions, calculate diffs, and animate.
+Motion does this with one prop - layout.
+</aside>

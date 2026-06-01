@@ -45,7 +45,7 @@
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; gap: 1.5rem;">
 	<Transition visible>
 		<p style="font-size: 1.8rem; font-weight: 700; color: var(--text); letter-spacing: -0.02em;">
-			Exit — the <span style="color: #ef4444;">React problem</span>
+			Exit - the <span style="color: #ef4444;">React problem</span>
 		</p>
 	</Transition>
 
@@ -62,7 +62,7 @@
 				</div>
 				<div style="display: flex; flex-direction: column; align-items: center; gap: 0.4rem;">
 					<button class="demo-btn" onclick={removeWaapi}>Remove last</button>
-					<p style="font-size: 0.7rem; color: #ef4444;">*poof* — gone instantly</p>
+					<p style="font-size: 0.7rem; color: #ef4444;">*poof* - gone instantly</p>
 				</div>
 			</div>
 		</div>
@@ -100,7 +100,13 @@
 
 	<Transition>
 		<p style="font-size: 1rem; color: var(--text-muted); margin-top: 0.3rem;">
-			React unmounts the DOM — WAAPI can't animate what doesn't exist
+			React unmounts the DOM - WAAPI can't animate what doesn't exist
 		</p>
 	</Transition>
 </div>
+
+<aside class="notes">
+Core React problem. Conditional render removes DOM immediately.
+WAAPI cannot animate what does not exist in the DOM.
+AnimatePresence solves this by delaying unmount until animation completes.
+</aside>

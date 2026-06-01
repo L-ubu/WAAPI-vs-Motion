@@ -129,7 +129,13 @@
 
 	<Transition>
 		<p style="font-size: 1rem; color: var(--text-muted); margin-top: 0.5rem;">
-			No CSS easing can replicate a real spring — this is Motion's <span style="color: var(--purple); font-weight: 600;">superpower</span>
+			No CSS easing can replicate a real spring - this is Motion's <span style="color: var(--purple); font-weight: 600;">superpower</span>
 		</p>
 	</Transition>
 </div>
+
+<aside class="notes">
+Real physics simulation - mass, stiffness, damping. No duration needed.
+The spring determines when to stop naturally.
+Feel how natural it is compared to easing curves.
+</aside>

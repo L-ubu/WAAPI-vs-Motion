@@ -22,7 +22,7 @@
 
 	<Transition>
 		<p style="font-size: 1.15rem; color: var(--text-muted); max-width: 650px; text-align: center;">
-			A production-grade animation library for the web — formerly known as Framer Motion.
+			A production-grade animation library for the web - formerly known as Framer Motion.
 		</p>
 	</Transition>
 
@@ -48,7 +48,13 @@
 
 	<Transition>
 		<p style="font-size: 0.95rem; color: var(--text-muted); margin-top: 0.5rem;">
-			Springs, gestures, layout animations, exit animations — all built-in
+			Springs, gestures, layout animations, exit animations - all built-in
 		</p>
 	</Transition>
 </div>
+
+<aside class="notes">
+Formerly Framer Motion - renamed to just Motion.
+Production-grade, around 16kb gzipped. Used by major companies.
+Supports React, Vue, vanilla JS.
+</aside>

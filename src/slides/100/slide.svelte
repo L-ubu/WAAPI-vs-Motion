@@ -120,3 +120,8 @@
 		70% { transform: translateX(112px); }
 	}
 </style>
+
+<aside class="notes">
+Welcome. Today we are comparing native browser animations (WAAPI) vs the Motion library.
+Goal: know when to use which tool for the job.
+</aside>
